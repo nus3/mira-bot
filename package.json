@@ -5,6 +5,9 @@
   "license": "UNLICENSED",
   "private": true,
   "packageManager": "yarn@3.1.1",
+  "scripts": {
+    "get-star-words": "ts-node --project scripts/tsconfig.json scripts/get-star-words.ts"
+  },
   "dependencies": {
     "@google/clasp": "2.4.1",
     "puppeteer-core": "13.0.1"
