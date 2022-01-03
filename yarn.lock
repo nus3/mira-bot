@@ -178,6 +178,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/google-apps-script@npm:1.0.41":
+  version: 1.0.41
+  resolution: "@types/google-apps-script@npm:1.0.41"
+  checksum: 21176ca905557a29c3e3968e3007ff7e96ad3f9f7fb674a1dd90633ab313166b2a54f5879576d7b76d5cc62f5387d78c8407ff77a937bdfc26caa324072ba836
+  languageName: node
+  linkType: hard
+
 "@types/http-cache-semantics@npm:*":
   version: 4.0.1
   resolution: "@types/http-cache-semantics@npm:4.0.1"
@@ -1915,6 +1922,7 @@ __metadata:
   dependencies:
     "@google/clasp": 2.4.1
     "@tsconfig/node16": 1.0.2
+    "@types/google-apps-script": 1.0.41
     "@types/node": 17.0.5
     puppeteer-core: 13.0.1
     ts-node: 10.4.0

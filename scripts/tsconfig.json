@@ -4,5 +4,5 @@
     "types": ["ts-node"],
     "lib": ["dom", "dom.iterable", "esnext"]
   },
-  "include": ["./**/*.ts"]
+  "include": ["./*.ts"]
 }
