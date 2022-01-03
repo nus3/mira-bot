@@ -45,3 +45,5 @@ yarn-error.log*
 .envrc
 
 output
+.clasprc.json
+.clasp.json
