@@ -2,6 +2,12 @@ const zeroPadding = (input: number): string => {
   return input.toString().padStart(2, "0");
 };
 
+const checkTime = (date: Date) => {
+  const hour = date.getHours();
+  const minute = date.getMinutes();
+  return hour === 9 && minute > 40 && minute <= 45;
+};
+
 const HOLIDAYS = [
   "12/27",
   "12/28",
@@ -16,6 +22,7 @@ const HOLIDAYS = [
 
 function sendMessage() {
   const currentDate = new Date();
+  if (checkTime(currentDate) === false) return;
   if (currentDate.getDay() === 0 || currentDate.getDay() === 6) return;
 
   const month = zeroPadding(currentDate.getMonth() + 1);
