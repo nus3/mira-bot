@@ -47,3 +47,5 @@ yarn-error.log*
 output
 .clasprc.json
 .clasp.json
+
+src/secrets.ts

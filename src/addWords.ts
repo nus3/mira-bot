@@ -1,4 +1,4 @@
-function main() {
+function addWords() {
   const sheetName = "star-words";
   const sheet = SpreadsheetApp.getActiveSpreadsheet().getSheetByName(sheetName);
 
