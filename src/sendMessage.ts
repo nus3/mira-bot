@@ -53,7 +53,7 @@ function sendMessage() {
       type: "section",
       text: {
         type: "mrkdwn",
-        text: ":star::star: オハヨー! 朝会の時間ダヨ!! :star::star:",
+        text: ":star::star: オハヨー! もうすぐ朝会の時間ダヨ!! :star::star:",
       },
     },
     {
