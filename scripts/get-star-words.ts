@@ -33,6 +33,23 @@ const arrayChunk = <T extends any[]>(array: T, size = 1) => {
   );
 };
 
+const createStarDataCode = (starData: StarData[]): string => {
+  const starDataStr = starData.map((s) => {
+    return `{
+  date: "${s.date}",
+  name: "${s.name}",
+  sign: "${s.sign}",
+  word: "${s.word}"
+}
+`;
+  });
+
+  return `export const STAR_DATA = [
+  ${starDataStr}
+]
+`;
+};
+
 const main = async () => {
   const browser = await puppeteer.launch({
     channel: "chrome",
@@ -57,8 +74,8 @@ const main = async () => {
       .split("\n")
       .filter((d) => d !== "");
 
-    const chunk = arrayChunk(trimData, 4);
-    const d: StarData[] = chunk.map((c: string[]) => {
+    const chunks = arrayChunk(trimData, 4);
+    const d: StarData[] = chunks.map((c: string[]) => {
       if (c.length !== 4) {
         throw new Error("星言葉をとってきてるサイトの構造が変わったようだ!!");
       }
@@ -77,7 +94,7 @@ const main = async () => {
   if (!existsSync("output")) {
     mkdirSync("output");
   }
-  writeFileSync("output/star-words.json", JSON.stringify(starData, null, 2));
+  writeFileSync("output/star-words.ts", createStarDataCode(starData));
 
   await browser.close();
 };
